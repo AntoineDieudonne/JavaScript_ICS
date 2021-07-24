@@ -94,7 +94,7 @@ function AddRegExField(Summary) {
 	// Ajout du texte SUMMARY
 	var description = document.createElement("p");
 	description.setAttribute('id', Summary + regexNB);
-	description.innerHTML = Summary;
+	description.innerHTML = Summary.replace('SUMMARY:','');
 	
 	// Ajout des éléments au div
 	var parent = document.getElementById("formulaire");
@@ -129,8 +129,8 @@ function GetURL(){
 	}
 	else { 
 		// Notification pour l'utilisateur
-		alert("URL Incorrecte");
-		return '';
+		//alert("URL Incorrecte");
+		return 'test.ics';
 	}
 }
 	
