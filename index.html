@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Get ICS file</title>
+	</head>
+<body>
+
+	<h1>Modification d'un fichier ICS<br></h1>
+
+	<div id="formulaire" >
+		<div id="file" >
+			<input type="text" id="ics_file" name="ics_file" autofocus="autofocus" size="50" placeholder="URL du fichier ICS" pattern=".{1,}" required >
+			<button id="resume" >Afficher le champ SUMMARY</button>
+		</div>
+		<br>
+	</div>
+	<br>
+	<button id="send" >Traiter le fichier avec les expressions régulières</button>
+
+
+	<!-- Partie JS qui va traiter le fichier ICS -->
+	<script src="main.js" ></script>
+
+</body>
+</html>
