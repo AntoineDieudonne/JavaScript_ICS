@@ -22,6 +22,9 @@ function ShowSummary() {
 	var file;	
 	// récupérer l'URL
 	let URL=GetURL();
+	if(URL==''){
+		return'';	
+	}
 
 	// Ouvrir le fichier
 	request = new XMLHttpRequest();
@@ -55,6 +58,7 @@ function ShowSummary() {
 					}
 				}
 			});
+			ICS.disabled = true;
 		}
 		else{
 			alert('erreur lors de la requête');
@@ -109,6 +113,9 @@ buttonSend.addEventListener('click', buttonSendEvent);
 function buttonSendEvent() { 
 
 	var URL=GetURL();
+	if(URL==''){
+		return'';	
+	}
 
 	ParseICS(URL);
 }
@@ -119,13 +126,12 @@ function GetURL(){
 	// Vérification si le lien du fichier ICS est bien de type http (le https est inclus puisqu'il contient aussi la chaîne http)
 	if(UnsureURL.includes("http") && UnsureURL.includes("://")) { 
 		return UnsureURL;
-	}/*
+	}
 	else { 
 		// Notification pour l'utilisateur
 		alert("URL Incorrecte");
-	}*/
-	
-	return "test.ics";
+		return '';
+	}
 }
 	
 // Permet d'ouvrir un fichier et séparer chaque ligne
@@ -147,7 +153,6 @@ function ParseICS(ICS_URL) {
 			}
 			// Récupère le texte du fichier
 			file = request.responseText;
-			//file=TestText;
 			if(file == [""]){
 				return '';
 			}
@@ -206,5 +211,3 @@ function DownloadICS(content, name){
 	// Supprime le lien de téléchargement
 	window.URL.revokeObjectURL(Download_URL);
 }
-
-//var TestText="BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//hacksw/handcal//NONSGML v1.0//ENBEGIN:VEVENT\nDTSTART:19970714T170000Z\nDTEND:19970715T035900Z\nSUMMARY:TD à distance - - Tracabilite - 4A SAGI TD G1\nEND:VEVENT\nEND:VCALENDAR\n";
