@@ -3,7 +3,7 @@ site en HTML et JS pour traiter les champs SUMMARY des fichiers ICS
 
 ### Fonctionnement :
 
-* Mettez les 2 fichiers [index.HTML](https://github.com/AntoineDieudonne/JavaScript_ICS/blob/main/index.html) et [main.JS](https://github.com/AntoineDieudonne/JavaScript_ICS/blob/main/main.js) dans le même dossier et ouvrez index.html.
+* Mettez les 2 fichiers [index.HTML](https://github.com/AntoineDieudonne/JavaScript_ICS/blob/main/index.html) et [main.JS](https://github.com/AntoineDieudonne/JavaScript_ICS/blob/main/main.js) dans le même dossier et ouvrez index.html dans votre navigateur.
 * Entrez l'URI du fichier ICS que vous voulez modifier et cliquez sur `Afficher le champ SUMMARY` pour commencer à éditer le champ SUMMARY comme montré ci-dessous
 
 ![Fichier tiré de la page wikipédia des fichiers ICS.](Images/PageSample.PNG)
